@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href= "styles.css" rel="stylesheet" type="text/css" />
+    <title>Results of Wages</title>
+</head>
+
+<body>
+    <div class="confirmation-container">
+        <h1>Display Wages Greater than or Equal to</h1>
+        <h2>Internships with Minimum Wage</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Company Name</th>
+      <th>Hourly Wage</th>
+      <th>Location</th>
+      <th>Role</th>
+      <th>Additional Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% internships.forEach(internship => { %>
+      <tr>
+        <td><%= internship.companyName %></td>
+        <td><%= internship.hourlyWage %></td>
+        <td><%= internship.location %></td>
+        <td><%= internship.role %></td>
+        <td><%= internship.additionalInfo %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+<a href="../">Home</a>
+    </div>
+</body>
+
+</html>
